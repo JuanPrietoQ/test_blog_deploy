@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: blog-django
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn blog_django.wsgi:application
+    autoDeploy: true
